@@ -4,13 +4,18 @@ from datetime import datetime
 
 
 class BaseModel:
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         """
         Initializer for BaseModel class.
         """
-        self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        if kwargs is not None:
+            for key, value in kwargs.items():
+                if key is not "__class__":
+                    self.__dict__[key] = value
+        else:
+            self.id = str(uuid.uuid4())
+            self.created_at = datetime.now()
+        self.updated_at = datetime.now()  # TODO: possibly needs to be in else
 
     def __str__(self):
         """
