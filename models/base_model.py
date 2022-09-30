@@ -32,7 +32,7 @@ class BaseModel:
         `__dict__` of the instance.
         """
         myDict = self.__dict__.copy()
-        myDict['__class__'] = self.__class__
+        myDict['__class__'] = type(self).__name__
         myDict['created_at'] = self.created_at.isoformat()
         myDict['updated_at'] = self.created_at.isoformat()
         return myDict
