@@ -7,6 +7,7 @@ import unittest
 from models.base_model import BaseModel as BaseModel
 from unittest import mock
 
+
 class BaseModelTests(unittest.TestCase):
     """
     Class BaseModelTests that provides unit testing for the
@@ -31,7 +32,6 @@ class BaseModelTests(unittest.TestCase):
         self.assertIsNotNone(self.base1.id)
         self.assertIsInstance(self.base1, BaseModel)
         self.assertNotEqual(self.base1.id, self.base2.id)
-        # TODO: Test __init__ for kwargs
         test_dict = self.base1.to_dict()
         base3 = BaseModel(test_dict)
         self.assertNotEqual(self.base1, base3)
@@ -59,7 +59,8 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(self.base1.updated_at.second, testdt.second)
 
     def test_str(self):
-        test_str = f"[{type(self.base1).__name__}] ({self.base1.id}) {self.base1.__dict__}"
+        test_str = f"[{type(self.base1).__name__}] \
+({self.base1.id}) {self.base1.__dict__}"
         self.assertEqual(str(self.base1), test_str)
 
     def test_save(self):
@@ -67,9 +68,11 @@ class BaseModelTests(unittest.TestCase):
         self.test_datetimes()
 
     def test_to_dict(self):
-        test_dict = self.base1.to_dict();
+        test_dict = self.base1.to_dict()
         self.assertIsInstance(test_dict, dict)
         self.assertEqual(test_dict['id'], self.base1.id)
-        self.assertEqual(test_dict['created_at'], self.base1.created_at.isoformat())
-        self.assertEqual(test_dict['updated_at'], self.base1.updated_at.isoformat())
+        create_iso = self.base1.created_at.isoformat()
+        update_iso = self.base1.updated_at.isoformat()
+        self.assertEqual(test_dict['created_at'], create_iso)
+        self.assertEqual(test_dict['updated_at'], update_iso)
         self.assertIn('__class__', test_dict)
