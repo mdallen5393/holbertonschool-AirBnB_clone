@@ -3,6 +3,8 @@
 file_storage module that contains the FileStorage class
 definition and methods
 """
+from models.base_model import BaseModel
+import json
 
 
 class FileStorage:
@@ -34,7 +36,11 @@ class FileStorage:
         """
         Serializes `__objects` to the JSON file.
         """
-        pass
+        ObjectDict = {}
+        for key in self.__objects:
+            ObjectDict[key] = self.__objects[key].to_dict()
+        with open(self.__file_path, 'w') as f:
+            json.dump(ObjectDict, f)
 
     def reload(self):
         """
