@@ -5,6 +5,7 @@ definition and methods
 """
 from models.base_model import BaseModel
 import json
+import os
 
 
 class FileStorage:
@@ -47,4 +48,7 @@ class FileStorage:
         Deserializes the JSON file to `__objects` if the file exists;
         otherwise, does nothing.
         """
-        pass
+        if os.path.exists(self.__file_path):
+            with open(self.__file_path, 'r') as f:
+                LoadDict = json.load(f)
+            self.__objects.update(LoadDict)
