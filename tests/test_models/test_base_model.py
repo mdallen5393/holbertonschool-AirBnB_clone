@@ -91,3 +91,7 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(test_dict['created_at'], create_iso)
         self.assertEqual(test_dict['updated_at'], update_iso)
         self.assertIn('__class__', test_dict)
+
+
+if __name__ == '__name__':
+    unittest.main()
