@@ -2,8 +2,9 @@
 """ Project 0x00. AirBnB clone - The console
     Task 4
 """
-import uuid
 from datetime import datetime
+import models
+import uuid
 
 
 class BaseModel:
