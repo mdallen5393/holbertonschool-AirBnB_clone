@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+""" Project 0x00. AirBnB clone - The console
+    Task 4
+"""
 import uuid
 from datetime import datetime
 
 
 class BaseModel:
+    """ defines all common attributes/methods for other classes
+    """
     def __init__(self, *args, **kwargs):
         """
         Initializer for BaseModel class.
