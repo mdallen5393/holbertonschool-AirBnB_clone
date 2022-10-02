@@ -67,3 +67,7 @@ class FileStorageTests(unittest.TestCase):
         of the FileStorage class.
         """
         pass
+
+
+if __name__ == '__name__':
+    unittest.main()
