@@ -15,11 +15,17 @@ class BaseModelTests(unittest.TestCase):
     """
     @classmethod
     def setUpClass(cls):
+        """
+        Method to set up BaseModel classes for use during testing.
+        """
         cls.base1 = BaseModel()
         cls.base2 = BaseModel()
 
     @classmethod
     def tearDownClass(cls):
+        """
+        Method to tear down BaseModel classes for use during testing.
+        """
         del cls.base1
         del cls.base2
         return super().tearDownClass()
@@ -59,15 +65,24 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(self.base1.updated_at.second, testdt.second)
 
     def test_str(self):
+        """
+        Method to test __str__ function of a BaseModel.
+        """
         test_str = f"[{type(self.base1).__name__}] \
 ({self.base1.id}) {self.base1.__dict__}"
         self.assertEqual(str(self.base1), test_str)
 
     def test_save(self):
+        """
+        Method to test save function of a BaseModel
+        """
         self.base1.save()
         self.test_datetimes()
 
     def test_to_dict(self):
+        """
+        Method to test to_dict function of a BaseModel
+        """
         test_dict = self.base1.to_dict()
         self.assertIsInstance(test_dict, dict)
         self.assertEqual(test_dict['id'], self.base1.id)
