@@ -3,7 +3,6 @@
     Task 4
 """
 from datetime import datetime
-import models
 import uuid
 
 

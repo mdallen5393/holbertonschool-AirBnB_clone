@@ -5,7 +5,6 @@ Unittest module for BaseModel class
 from datetime import datetime
 import unittest
 from models.base_model import BaseModel as BaseModel
-from unittest import mock
 
 
 class BaseModelTests(unittest.TestCase):
