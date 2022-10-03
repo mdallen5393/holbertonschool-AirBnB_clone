@@ -7,7 +7,11 @@ from models.base_model import BaseModel
 import json
 import os
 import models.user
-
+import models.place
+import models.state
+import models.city
+import models.amenity
+import models.review
 
 class FileStorage:
     """
