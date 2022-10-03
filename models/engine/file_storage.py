@@ -6,6 +6,7 @@ definition and methods
 from models.base_model import BaseModel
 import json
 import os
+import models
 from models.city import City
 from models.place import Place
 from models.review import Review
@@ -35,18 +36,17 @@ class FileStorage:
         """
         Sets in `__objects` the `obj` with key `<obj class name>.id`.
         """
-        key = f'{type(obj).__name__}.{obj.id}'
-        self.__objects[key] = obj
+        self.__objects[f"{obj.__class__.__name__}.{obj.id}"] = obj
 
     def save(self):
         """
         Serializes `__objects` to the JSON file.
         """
         ObjectDict = {}
-        for key in self.__objects:
-            ObjectDict[key] = self.__objects[key].to_dict()
-        with open(self.__file_path, 'w') as f:
-            json.dump(ObjectDict, f)
+        for key, value in self.__objects.items():
+            ObjectDict[key] = value.to_dict()
+        with open(self.__file_path, 'w', encoding='utf=8') as f:
+            f.write(json.dumps(ObjectDict))
 
     def reload(self):
         """

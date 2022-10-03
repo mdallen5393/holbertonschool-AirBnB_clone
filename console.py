@@ -43,27 +43,26 @@ class HBNBCommand(cmd.Cmd):
         """
         return True
 
-    def do_create(self, arg):
+    def do_create(self, args):
         """
         Creates a new instance of a class
         """
-        args = shlex.split(arg)
+        # args = shlex.split(args)
         if len(args) == 0:
             print("** class name missing **")
             return False
-        if args[0] in classes:
-            instance = classes[args[0]]()
+        elif args in classes.keys():
+            instance = classes[args]()
+            print(instance.id)
+            instance.save()
         else:
             print("** class doesn't exist **")
-            return False
-        print(instance.id)
-        instance.save()
 
-    def do_show(self, arg):
+    def do_show(self, args):
         """
         Prints an instance as a string based on the class and id
         """
-        args = shlex.split(arg)
+        args = shlex.split(args)
         if len(args) == 0:
             print("** class name missing **")
             return False
@@ -79,11 +78,11 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_destroy(self, arg):
+    def do_destroy(self, args):
         """
         Deletes an instance based on the class and id
         """
-        args = shlex.split(arg)
+        args = shlex.split(args)
         if len(args) == 0:
             print("** class name missing **")
         elif args[0] in classes:
@@ -99,11 +98,11 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_all(self, arg):
+    def do_all(self, args):
         """
         Prints string representations of instances
         """
-        args = shlex.split(arg)
+        args = shlex.split(args)
         obj_list = []
         if len(args) == 0:
             for value in models.storage.all().values():
@@ -121,11 +120,11 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** class doesn't exist **")
 
-    def do_update(self, arg):
+    def do_update(self, args):
         """
         Update an instance based on the class name, id, attribute & value
         """
-        args = shlex.split(arg)
+        args = shlex.split(args)
         integers = ["number_rooms", "number_bathrooms", "max_guest",
                     "price_by_night"]
         floats = ["latitude", "longitude"]
