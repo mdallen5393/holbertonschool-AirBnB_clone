@@ -3,9 +3,8 @@
     Task 4
 """
 from datetime import datetime
-from types import new_class
 import uuid
-import storage
+from models import storage
 
 
 class BaseModel:
