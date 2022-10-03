@@ -23,10 +23,10 @@ class BaseModel:
             self.created_at = datetime.strptime(self.created_at, s)
             self.updated_at = datetime.strptime(self.updated_at, s)
         else:
-            storage.new(self)
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
     def __str__(self):
         """
