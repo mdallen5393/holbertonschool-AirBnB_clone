@@ -6,6 +6,7 @@ definition and methods
 from models.base_model import BaseModel
 import json
 import os
+import models.user
 
 
 class FileStorage:
