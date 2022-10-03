@@ -6,12 +6,12 @@ definition and methods
 from models.base_model import BaseModel
 import json
 import os
-import models.user
-import models.place
-import models.state
-import models.city
-import models.amenity
-import models.review
+from models.city import City
+from models.place import Place
+from models.review import Review
+from models.state import State
+from models.user import User
+from models.amenity import Amenity
 
 class FileStorage:
     """
