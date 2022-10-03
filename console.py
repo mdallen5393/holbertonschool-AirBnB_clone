@@ -21,7 +21,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 class HBNBCommand(cmd.Cmd):
     """
-     HBNH console 
+     HBNH console
      """
     prompt = '(hbnb) '
 
@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
-        """ 
+        """
         overwriting the emptyline method
         """
         return False
