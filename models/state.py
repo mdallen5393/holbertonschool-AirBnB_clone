@@ -9,8 +9,3 @@ class State(BaseModel):
     """ State class
     """
     state = ""
-
-    def __init__(self):
-        """Initializes Name of state
-        """
-        pass
