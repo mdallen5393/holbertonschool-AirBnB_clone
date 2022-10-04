@@ -4,7 +4,7 @@ test_user is a module used for unit testing of
 the User class.
 """
 import unittest
-from models.user import User as User
+from models.user import User
 
 
 class UserTests(unittest.TestCase):

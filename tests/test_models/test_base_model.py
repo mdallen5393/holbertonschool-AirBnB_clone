@@ -5,6 +5,7 @@ Unittest module for BaseModel class
 from datetime import datetime
 import unittest
 from models.base_model import BaseModel as BaseModel
+import pathlib
 
 
 class BaseModelTests(unittest.TestCase):
@@ -88,6 +89,8 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(self.base1.updated_at.hour, testdt.hour)
         self.assertEqual(self.base1.updated_at.minute, testdt.minute)
         self.assertEqual(self.base1.updated_at.second, testdt.second)
+        path = pathlib.Path("file.json")
+        self.assertTrue(path.is_file())
 
     def test_to_dict(self):
         """
