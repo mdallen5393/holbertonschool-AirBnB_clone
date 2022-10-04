@@ -91,6 +91,9 @@ class BaseModelTests(unittest.TestCase):
         self.assertEqual(self.base1.updated_at.second, testdt.second)
         path = pathlib.Path("file.json")
         self.assertTrue(path.is_file())
+        with open("file.json", 'r', encoding='utf-8') as f:
+            json_str = f.read()
+            self.assertIsNotNone(json_str)
 
     def test_to_dict(self):
         """
