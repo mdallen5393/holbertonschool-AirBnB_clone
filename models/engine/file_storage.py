@@ -51,6 +51,6 @@ class FileStorage:
         otherwise, does nothing.
         """
         if os.path.exists(self.__file_path):
-            with open(self.__file_path, 'r') as f:
-                LoadDict = json.load(f)
+            with open(self.__file_path, 'r', encoding='utf-8') as f:
+                LoadDict = json.loads(f.read())
             self.__objects.update(LoadDict)
