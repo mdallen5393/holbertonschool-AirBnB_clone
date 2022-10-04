@@ -1,11 +1,10 @@
 #!/usr/bin/python3
 """
-test_user is a module used for unit testing of 
+test_user is a module used for unit testing of
 the User class.
 """
 import unittest
 from models.user import User as User
-
 
 
 class UserTests(unittest.TestCase):
@@ -39,6 +38,24 @@ class UserTests(unittest.TestCase):
         self.assertIsInstance(self.user1.password, str)
         self.assertIsInstance(self.user1.first_name, str)
         self.assertIsInstance(self.user1.last_name, str)
+
+    def test_instance_attrs(self):
+        test_dict = self.user2.to_dict()
+        self.user3 = User(test_dict)
+        self.user3.email = "test@fakemail.com"
+        self.user3.password = "1234"
+        self.user3.first_name = "Blatthew"
+        self.user3.last_name = "Blallen"
+        user_info = {
+            "email": "test@fakemail.com",
+            "password": "1234",
+            "first_name": "Blatthew",
+            "last_name": "Blallen"
+        }
+        # Non-depricated version of "assertDictContainsSubset"
+        test_set = {**self.user3.to_dict(), **user_info}
+        self.assertEqual(self.user3.to_dict(), test_set)
+        self.assertNotEqual(self.user2, self.user3)
 
 
 if __name__ == '__name__':
