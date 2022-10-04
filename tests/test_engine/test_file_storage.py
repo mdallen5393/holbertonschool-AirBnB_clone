@@ -26,6 +26,7 @@ class FileStorageTests(unittest.TestCase):
         """
         del cls.fs1
         del cls.fs2
+        del cls.bm1
         return super().tearDown()
 
     def test_init(self):
@@ -55,21 +56,21 @@ class FileStorageTests(unittest.TestCase):
         Method for testing functionality of the new() method
         of the FileStorage class.
         """
-        pass
+        pass # FIXME:
 
     def test_save(self):
         """
         Method for testing functionality of the save() method
         of the FileStorage class.
         """
-        pass
+        pass # FIXME:
 
     def test_reload(self):
         """
         Method for testing functionality of the reload() method
         of the FileStorage class.
         """
-        pass
+        pass # FIXME:
 
 
 if __name__ == '__name__':
