@@ -35,7 +35,7 @@ class FileStorageTests(unittest.TestCase):
         self.assertIsNotNone(self.fs1)
         self.assertIsInstance(self.fs1, FileStorage)
         self.assertIsNotNone(self.fs1._FileStorage__file_path)
-        # self.assertEqual(self.fs1._FileStorage__objects, {}) #FIXME:
+        # self.assertIsNotNone(self.fs1._FileStorage__objects) #FIXME:
 
     def test_all(self):
         """

@@ -94,6 +94,7 @@ class BaseModelTests(unittest.TestCase):
         with open("file.json", 'r', encoding='utf-8') as f:
             json_str = f.read()
             self.assertIsNotNone(json_str)
+        self.assertIn(f"{self.base1.__class__.__name__}.{self.base1.id}", json_str)
 
     def test_to_dict(self):
         """
