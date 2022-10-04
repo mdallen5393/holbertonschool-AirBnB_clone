@@ -44,12 +44,10 @@ class FileStorageTests(unittest.TestCase):
         Method for testing functionality of the all() method
         of the FileStorage class.
         """
-        # self.assertEqual(self.fs1.all(), {})
         self.assertIsNotNone(self.fs1.all())
         self.assertIsInstance(self.fs1.all(), dict)
         self.fs1.new(self.bm1)
         key = f'BaseModel.{self.bm1.id}'
-        # self.assertEqual(self.fs1.all(), {key: self.bm1})
         self.assertIsNotNone(self.fs1.all(), {key: self.bm1})
 
     def test_new(self):
