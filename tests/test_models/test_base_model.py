@@ -76,7 +76,18 @@ class BaseModelTests(unittest.TestCase):
         Method to test save function of a BaseModel
         """
         self.base1.save()
-        self.test_datetimes()
+        testdt = datetime.now()
+        self.assertEqual(self.base1.created_at.year, testdt.year)
+        self.assertEqual(self.base1.created_at.month, testdt.month)
+        self.assertEqual(self.base1.created_at.day, testdt.day)
+        self.assertEqual(self.base1.created_at.hour, testdt.hour)
+        self.assertEqual(self.base1.created_at.minute, testdt.minute)
+        self.assertEqual(self.base1.updated_at.year, testdt.year)
+        self.assertEqual(self.base1.updated_at.month, testdt.month)
+        self.assertEqual(self.base1.updated_at.day, testdt.day)
+        self.assertEqual(self.base1.updated_at.hour, testdt.hour)
+        self.assertEqual(self.base1.updated_at.minute, testdt.minute)
+        self.assertEqual(self.base1.updated_at.second, testdt.second)
 
     def test_to_dict(self):
         """
