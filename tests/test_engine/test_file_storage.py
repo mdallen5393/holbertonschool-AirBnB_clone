@@ -56,7 +56,7 @@ class FileStorageTests(unittest.TestCase):
         Method for testing functionality of the new() method
         of the FileStorage class.
         """
-        pass # FIXME:
+        pass
 
     def test_save(self):
         """
