@@ -50,10 +50,10 @@ This project exists because of the following contributors:<br />
 Matthew Allen
 <a href="https://github.com/mdallen5393"><img src="https://avatars.githubusercontent.com/u/92639333?v=4"></a>
 
-Aaron Manuel
+Aaron Manuel<br />
 <a href="https://github.com/AaronManuel15"><img src="https://avatars.githubusercontent.com/u/100643249?v=4"></a>
 
-Logan Mcclain
+Logan Mcclain<br />
 <a href="https://github.com/AnActualBanana"><img src="https://avatars.githubusercontent.com/u/92802843?v=4"></a>
 
 
