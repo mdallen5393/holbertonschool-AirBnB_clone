@@ -19,31 +19,41 @@ The project contains:
 - Creation of a the first abstracted storage engine of the project: File storage.
 - Unittests to validate all classes as well as the storage engine.
 
-# AARON, I STOPPED HERE
 
-## <center>How to Use (plus Examples)
-The user of *hsh* will be able to utilize it in an interactive or non-interactive mode as desired. Running *./hsh* in terminal will open up a prompt that the user can call functions from. For example:
+## <center>How to Use (with examples)
+The user of the console will be able to utilize it in an interactive or non-interactive mode as desired. Running `./console.py` in terminal will open up a prompt that the user can call functions from. For example:
 
-    ./hsh
-    ($) cat "file"
-    [prints contents of "file" to stdout]
-    ($) exit
-    
+    ./console.py
+    (hbtn) help
+    Documented commands (type help <topic>):
+    ========================================
+    EOF  all  create  destroy  help  quit  show  update
 
-Either piping in commands or executing them with *./hsh* will executes the commands without opening the prompt and keeps you in your linux terminal. For example:
+Commands may be executed non-interactively by piping them into the console. For example:
 
 Both
 
-    cat "file" | ./hsh
+    echo "create BaseModel" | ./console.py
 
 and
 
-   `./hsh cat "file"` 
+    ./console.py
+    (hbtn) create BaseModel
 
-Will display the contents of "file" to stdout. 
+will create an instance of the BaseModel class and print its id. 
+
+The `EOF` command is used to terminate the console.  Alternatively, Ctrl+D may be used.
 
 ## Contributors
 This project exists because of the following contributors:<br />
-<a href="https://github.com/mdallen5393"><img src="https://avatars.githubusercontent.com/u/92639333?v=4"></a> <a href="https://github.com/AaronManuel15"><img src="https://avatars.githubusercontent.com/u/100643249?v=4"></a> <a href="https://github.com/AnActualBanana"><img src="https://avatars.githubusercontent.com/u/92802843?v=4"></a> 
+
+Matthew Allen
+<a href="https://github.com/mdallen5393"><img src="https://avatars.githubusercontent.com/u/92639333?v=4"></a>
+
+Aaron Manuel
+<a href="https://github.com/AaronManuel15"><img src="https://avatars.githubusercontent.com/u/100643249?v=4"></a>
+
+Logan Mcclain
+<a href="https://github.com/AnActualBanana"><img src="https://avatars.githubusercontent.com/u/92802843?v=4"></a>
 
 
