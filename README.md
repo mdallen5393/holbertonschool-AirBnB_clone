@@ -1,4 +1,4 @@
-# <center>![page](https://github.com/matiassingers/awesome-readme/blob/master/icon.png?raw=true)
+# <center>![page](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221010%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221010T174625Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ef868a2a68b46c02d7b04926fb3d28af8085f66586e0d4b2215ddccd06e75d46)
 
 
 # <center>Holberton AirBnB Clone - The Console
@@ -47,7 +47,7 @@ The `EOF` command is used to terminate the console.  Alternatively, Ctrl+D may b
 ## Contributors
 This project exists because of the following contributors:<br />
 
-Matthew Allen
+Matthew Allen<br />
 <a href="https://github.com/mdallen5393"><img src="https://avatars.githubusercontent.com/u/92639333?v=4"></a>
 
 Aaron Manuel<br />
