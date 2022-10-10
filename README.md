@@ -1,4 +1,4 @@
-# <center>![page](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2018/6/65f4a1dd9c51265f49d0.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOU5BHMTQX4%2F20221010%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221010T174625Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=ef868a2a68b46c02d7b04926fb3d28af8085f66586e0d4b2215ddccd06e75d46)
+# <center>![page](https://camo.githubusercontent.com/a8cd2eef2325c425519095dc2501111e630a77eddb454938c527cb82ea9c3aeb/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f696e7472616e65742d70726f6a656374732d66696c65732f686f6c626572746f6e7363686f6f6c2d6869676865722d6c6576656c5f70726f6772616d6d696e672b2f3236332f4842544e2d68626e622d46696e616c2e706e67)
 
 
 # <center>Holberton AirBnB Clone - The Console
