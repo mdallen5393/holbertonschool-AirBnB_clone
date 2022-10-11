@@ -4,4 +4,6 @@ footer {
     width: 100%;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    bottom: 0px;
 }
