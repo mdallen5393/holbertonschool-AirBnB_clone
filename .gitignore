@@ -3,6 +3,8 @@ test_base_model.py
 test_save_reload_user.py
 test_save_reload_base_model.py
 __pycache__
+__pycache__/
 *.pyc
 file.json
-
+*~
+misc
