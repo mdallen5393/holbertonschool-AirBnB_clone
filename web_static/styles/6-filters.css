@@ -5,6 +5,8 @@
     border: 1px #ddd solid;
     border-radius: 4px;
     display: flex;
+    flex-direction:row;
+    justify-content:center;
     align-items: center;
 }
 
@@ -28,6 +30,7 @@
     height: 100%;
     width: 25%;
     border-right:#ddd 1px solid;
+    margin-bottom:0;
 }
 
 .filters .amenities {
@@ -40,21 +43,15 @@
     background-color: #fafafa;
     border: #ddd 1px solid;
     border-radius: 4px;
+    padding:15%;
 }
 
-.filters li {
-    padding-right:10%;
-}
-
-
-
-.filters .popover h2 {
+.filters .popover h2 { /*states*/
     margin-bottom: 5px;
     font-size: 16px;
 }
 
 .filters ul {
-    padding:5%;
     list-style-type: none;
 }
 
@@ -66,11 +63,15 @@
     font-weight:600;
     margin-left: 15%;
     /* margin-top: 15%; */
+    margin-bottom: 0%;
 }
 
 .filters h4 {
     font-weight:400;
     font-size:14px;
     margin-left: 15%;
-    margin-top: -5%;
+    /* margin-top: -5%; */
+    margin-top: 0%;
+    margin-bottom: 9%;
+    /* margin-bottom:0%; */
 }
