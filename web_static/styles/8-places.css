@@ -1,0 +1,111 @@
+.places {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.places article {
+    width: 390px;
+    padding: 20px;
+    margin: 20px;
+    border: #ff5a5f 1px solid;
+    border-radius: 4px;
+    text-align: center;
+    grid-row-start: 2;
+    display: flex;
+    order: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.places h1 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 0;
+    flex-basis: 100%;
+}
+
+.places h2 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 75%;
+    align-content: center;
+}
+
+.places .price_by_night {
+    color:#ff5a5f;
+    border: #ff5a5f 4px solid;
+    border-radius:50%;
+    width:60px;
+    height:60px;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.places .information {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border-top: #ddd 1px solid;
+    border-bottom: #ddd 1px solid;
+    padding: 30px;
+    margin-top:15px;
+    margin-bottom:15px;
+    width: 100%;
+}
+
+.information .max_guest {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.max_guest link {
+    display: flex;
+}
+
+.max_guest p {
+    display: flex;
+}
+
+.information .number_rooms {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.information .number_bathrooms {
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.places .description {
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* .places .guest_icon {
+    background-image: url('../images/icon_group.png');
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+.places .room_icon {
+    background-image: url('../images/icon_bed.png');
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+}
+
+.places .bathroom_icon {
+    background-image: url('../images/icon_bath.png');
+    background-repeat: no-repeat;
+    background-position: 50% 25%;
+} */
