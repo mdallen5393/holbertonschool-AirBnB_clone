@@ -22,7 +22,7 @@
     margin-left: auto;
 }
 
-.filters button:hover{
+.filters button:hover {
     opacity:90%;
 }
 
@@ -44,6 +44,7 @@
     border: #ddd 1px solid;
     border-radius: 4px;
     padding:15%;
+    z-index: 1000;
 }
 
 .filters .popover h2 { /*states*/
